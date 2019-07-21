@@ -17,7 +17,7 @@ function Treinador(props) {
         <div>
             <ul>{listItems}</ul>
             <button onClick={() => props.selectpokemon(pokemonescolhido,props.treinador)}>
-                Clique aqui
+                Escolher pokemon
             </button>
         </div>
     );

@@ -19,7 +19,12 @@ function Principal() {
         iv: 0,
         ev: 0,
         nature: '',
-        rodadas: 0
+        rodadas: 0,
+        habilidade: {
+            power: 45,
+            tipo: 'attack',
+            name: 'Vine Whip'
+        }
     },{
         name: 'Charmander',
         hp: 39,
@@ -33,7 +38,12 @@ function Principal() {
         iv: 0,
         ev: 0,
         nature: '',
-        rodadas: 0
+        rodadas: 0,
+        habilidade: {
+            power: 40,
+            tipo: 'spattack',
+            name: 'Ember'
+        }
     },{
         name: 'Squirtle',
         hp: 44,
@@ -47,7 +57,12 @@ function Principal() {
         iv: 0,
         ev: 0,
         nature: '',
-        rodadas: 0
+        rodadas: 0,
+        habilidade: {
+            power: 40,
+            tipo: 'spattack',
+            name: 'Bubble'
+        }
     },{
         name: 'Caterpie',
         hp: 45,
@@ -61,7 +76,12 @@ function Principal() {
         iv: 0,
         ev: 0,
         nature: '',
-        rodadas: 0
+        rodadas: 0,
+        habilidade: {
+            power: 40,
+            tipo: 'attack',
+            name: 'Tackle'
+        }
     },{
         name: 'Weedle',
         hp: 40,
@@ -75,7 +95,12 @@ function Principal() {
         iv: 0,
         ev: 0,
         nature: '',
-        rodadas: 0
+        rodadas: 0,
+        habilidade: {
+            power: 40,
+            tipo: 'attack',
+            name: 'Tackle'
+        }
     }];
 
     const nature = [{
@@ -268,7 +293,12 @@ function Principal() {
         iv: 0,
         ev: 0,
         nature: '',
-        rodadas: 0
+        rodadas: 0,
+        habilidade: {
+            power: 0,
+            tipo: '',
+            name: ''
+        }
     });
 
     const [pokemondotreinador2, setpokemondotreinador2] = useState({
@@ -284,7 +314,12 @@ function Principal() {
         iv: 0,
         ev: 0,
         nature: '',
-        rodadas: 0
+        rodadas: 0,
+        habilidade: {
+            power: 0,
+            tipo: '',
+            name: ''
+        }
     });
 
     const selectpokemon = (pokemon,treinador) => {
@@ -303,7 +338,8 @@ function Principal() {
                 iv: status.iv,
                 ev: status.ev,
                 nature: status.nature,
-                rodadas: pokemon.rodadas
+                rodadas: pokemon.rodadas,
+                habilidade: pokemon.habilidade
             });
         }else{
             setpokemondotreinador2({
@@ -319,7 +355,8 @@ function Principal() {
                 iv: status.iv,
                 ev: status.ev,
                 nature: status.nature,
-                rodadas: pokemon.rodadas
+                rodadas: pokemon.rodadas,
+                habilidade: pokemon.habilidade
             });
         }
     };
@@ -388,6 +425,9 @@ function Principal() {
                 <p>IV: {pokemondotreinador1.iv}</p>
                 <p>EV: {pokemondotreinador1.ev}</p>
                 <p>Nature: {pokemondotreinador1.nature.name}</p>
+                <p>habilidade name: {pokemondotreinador1.habilidade.name}</p>
+                <p>habilidade power: {pokemondotreinador1.habilidade.power}</p>
+                <p>habilidade tipo: {pokemondotreinador1.habilidade.tipo}</p>
             </div>
             <div>
                 <h1>treinador2</h1>
@@ -403,6 +443,9 @@ function Principal() {
                 <p>IV: {pokemondotreinador2.iv}</p>
                 <p>EV: {pokemondotreinador2.ev}</p>
                 <p>Nature: {pokemondotreinador2.nature.name}</p>
+                <p>habilidade name: {pokemondotreinador2.habilidade.name}</p>
+                <p>habilidade power: {pokemondotreinador2.habilidade.power}</p>
+                <p>habilidade tipo: {pokemondotreinador2.habilidade.tipo}</p>
             </div>
         </div>
     );
@@ -412,19 +455,19 @@ const styles = StyleSheet.create({
     divTreinador1: {
         height: '50vh',
         width: '50vw',
-        backgroundColor: 'red',
+        backgroundColor: 'white',
         display: 'inline-block'
     },
     divTreinador2: {
         height: '50vh',
         width: '50vw',
-        backgroundColor: 'blue',
+        backgroundColor: 'white',
         display: 'inline-block'
     },
     divBatalha: {
         height: '50vh',
         width: '100vw',
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         display: 'inline-block'
     },
 });
