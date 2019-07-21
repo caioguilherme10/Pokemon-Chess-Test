@@ -101,6 +101,63 @@ function Principal() {
             tipo: 'attack',
             name: 'Tackle'
         }
+    },{
+        name: 'Pidgey',
+        hp: 40,
+        attack: 45,
+        defense: 40,
+        spAttack: 35,
+        spDefense: 35,
+        speed: 56,
+        total: 251,
+        level: 50,
+        iv: 0,
+        ev: 0,
+        nature: '',
+        rodadas: 0,
+        habilidade: {
+            power: 40,
+            tipo: 'spattack',
+            name: 'Gust'
+        }
+    },{
+        name: 'Nidoran ♀',
+        hp: 55,
+        attack: 47,
+        defense: 52,
+        spAttack: 40,
+        spDefense: 40,
+        speed: 41,
+        total: 275,
+        level: 50,
+        iv: 0,
+        ev: 0,
+        nature: '',
+        rodadas: 0,
+        habilidade: {
+            power: 40,
+            tipo: 'attack',
+            name: 'Scratch'
+        }
+    },{
+        name: 'Nidoran ♂',
+        hp: 46,
+        attack: 57,
+        defense: 40,
+        spAttack: 40,
+        spDefense: 40,
+        speed: 50,
+        total: 273,
+        level: 50,
+        iv: 0,
+        ev: 0,
+        nature: '',
+        rodadas: 0,
+        habilidade: {
+            power: 35,
+            tipo: 'attack',
+            name: 'Peck'
+        }
     }];
 
     const nature = [{
@@ -401,7 +458,7 @@ function Principal() {
     const treinador2 = 2;
 
     return (
-        <div>
+        <div className={css(styles.div)}>
             <div className={css(styles.divTreinador1)}>
                 <Treinador pokemons={pokemons} treinador={treinador1} selectpokemon={selectpokemon}/>
             </div>
@@ -411,7 +468,7 @@ function Principal() {
             <div className={css(styles.divBatalha)}>
                 <Batalha pokemonT1={pokemondotreinador1} pokemonT2={pokemondotreinador2}/>
             </div>
-            <div>
+            <div className={css(styles.divStatus)}>
                 <h1>treinador1</h1>
                 <p>Nome: {pokemondotreinador1.name}</p>
                 <p>HP: {pokemondotreinador1.hp}</p>
@@ -429,7 +486,7 @@ function Principal() {
                 <p>habilidade power: {pokemondotreinador1.habilidade.power}</p>
                 <p>habilidade tipo: {pokemondotreinador1.habilidade.tipo}</p>
             </div>
-            <div>
+            <div className={css(styles.divStatus)}>
                 <h1>treinador2</h1>
                 <p>Nome: {pokemondotreinador2.name}</p>
                 <p>HP: {pokemondotreinador2.hp}</p>
@@ -452,24 +509,38 @@ function Principal() {
 }
 
 const styles = StyleSheet.create({
+    div: {
+        height: '100vh',
+        width: '100vw',
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
     divTreinador1: {
         height: '50vh',
         width: '50vw',
         backgroundColor: 'white',
-        display: 'inline-block'
+        overflow: 'auto'
     },
     divTreinador2: {
         height: '50vh',
         width: '50vw',
         backgroundColor: 'white',
-        display: 'inline-block'
+        overflow: 'auto'
     },
     divBatalha: {
+        display: 'flex',
         height: '50vh',
         width: '100vw',
         backgroundColor: 'white',
-        display: 'inline-block'
+        overflow: 'auto',
+        justifyContent: 'center',
     },
+    divStatus: {
+        height: '100vh',
+        width: '50vw',
+        backgroundColor: 'white',
+    }
 });
 
 export default Principal;

@@ -11,7 +11,7 @@ function Treinador(props) {
 
     const pokemons = props.pokemons;
     const listItems = pokemons.map( (pokemon, index) =>
-        <li key={index} onClick={() => atribuirpokemon(pokemon)}>{pokemon.name}</li>
+        <li className={css(styles.li)} key={index} onClick={() => atribuirpokemon(pokemon)}>{pokemon.name}</li>
     );
     return (
         <div>
@@ -22,5 +22,15 @@ function Treinador(props) {
         </div>
     );
 }
+
+const styles = StyleSheet.create({
+    li: {
+        border: '5px solid gray',
+        listStyleType: 'none',
+        ':hover': {
+            backgroundColor: 'yellow'
+        }
+    }
+});
 
 export default Treinador;
