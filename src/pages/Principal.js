@@ -23,7 +23,15 @@ function Principal() {
         habilidade: {
             power: 45,
             tipo: 'attack',
-            name: 'Vine Whip'
+            name: 'Vine Whip',
+            type: 'Grass'
+        },
+        type: {
+            name: ['Grass','Poison'],
+            x2: ['Flying','Fire','Psychic','Ice'],
+            x1: ['Normal','Poison','Ground','Rock','Bug','Ghost','Steel','Dragon','Dark'],
+            x0: [],
+            x12: ['Fighting','Water','Grass','Electric','Fairy']
         }
     },{
         name: 'Charmander',
@@ -42,7 +50,15 @@ function Principal() {
         habilidade: {
             power: 40,
             tipo: 'spattack',
-            name: 'Ember'
+            name: 'Ember',
+            type: 'Fire'
+        },
+        type: {
+            name: ['Fire'],
+            x2: ['Ground','Rock','Water'],
+            x1: ['Normal','Fighting','Flying','Poison','Ghost','Electric','Psychic','Dragon','Dark'],
+            x0: [],
+            x12: ['Bug','Steel','Fire','Grass','Ice','Fairy']
         }
     },{
         name: 'Squirtle',
@@ -61,7 +77,15 @@ function Principal() {
         habilidade: {
             power: 40,
             tipo: 'spattack',
-            name: 'Bubble'
+            name: 'Bubble',
+            type: 'Water'
+        },
+        type: {
+            name: ['Water'],
+            x2: ['Grass','Electric'],
+            x1: ['Normal','Fighting','Flying','Poison','Ground','Rock','Bug','Ghost','Psychic','Dragon','Dark','Fairy'],
+            x0: [],
+            x12: ['Steel','Fire','Water','Ice']
         }
     },{
         name: 'Caterpie',
@@ -80,7 +104,15 @@ function Principal() {
         habilidade: {
             power: 40,
             tipo: 'attack',
-            name: 'Tackle'
+            name: 'Tackle',
+            type: 'Normal'
+        },
+        type: {
+            name: ['Bug'],
+            x2: ['Flying','Rock','Fire'],
+            x1: ['Normal','Poison','Bug','Ghost','Steel','Water','Electric','Psychic','Ice','Dragon','Dark','Fairy'],
+            x0: [],
+            x12: ['Fighting','Ground','Grass']
         }
     },{
         name: 'Weedle',
@@ -99,7 +131,15 @@ function Principal() {
         habilidade: {
             power: 40,
             tipo: 'attack',
-            name: 'Tackle'
+            name: 'Tackle',
+            type: 'Normal'
+        },
+        type: {
+            name: ['Bug','Poison'],
+            x2: ['Flying','Rock','Fire','Psychic'],
+            x1: ['Normal','Ground','Ghost','Steel','Water','Electric','Ice','Dragon','Dark'],
+            x0: [],
+            x12: ['Fighting','Poison','Bug','Grass','Fairy']
         }
     },{
         name: 'Pidgey',
@@ -118,7 +158,15 @@ function Principal() {
         habilidade: {
             power: 40,
             tipo: 'spattack',
-            name: 'Gust'
+            name: 'Gust',
+            type: 'Flying'
+        },
+        type: {
+            name: ['Normal','Flying'],
+            x2: ['Rock','Electric','Ice'],
+            x1: ['Normal','Fighting','Flying','Poison','Steel','Water','Fire','Psychic','Dragon','Dark','Fairy'],
+            x0: ['Ground','Ghost'],
+            x12: ['Bug','Grass']
         }
     },{
         name: 'Nidoran ♀',
@@ -137,7 +185,15 @@ function Principal() {
         habilidade: {
             power: 40,
             tipo: 'attack',
-            name: 'Scratch'
+            name: 'Scratch',
+            type: 'Normal'
+        },
+        type: {
+            name: ['Poison'],
+            x2: ['Ground','Psychic'],
+            x1: ['Normal','Flying','Rock','Ghost','Steel','Water','Fire','Electric','Ice','Dragon','Dark'],
+            x0: [],
+            x12: ['Fighting','Poison','Bug','Grass','Fairy']
         }
     },{
         name: 'Nidoran ♂',
@@ -156,7 +212,15 @@ function Principal() {
         habilidade: {
             power: 35,
             tipo: 'attack',
-            name: 'Peck'
+            name: 'Peck',
+            type: 'Flying'
+        },
+        type: {
+            name: ['Poison'],
+            x2: ['Ground','Psychic'],
+            x1: ['Normal','Flying','Rock','Ghost','Steel','Water','Fire','Electric','Ice','Dragon','Dark'],
+            x0: [],
+            x12: ['Fighting','Poison','Bug','Grass','Fairy']
         }
     }];
 
@@ -485,6 +549,7 @@ function Principal() {
                 <p>habilidade name: {pokemondotreinador1.habilidade.name}</p>
                 <p>habilidade power: {pokemondotreinador1.habilidade.power}</p>
                 <p>habilidade tipo: {pokemondotreinador1.habilidade.tipo}</p>
+                <p>habilidade type: {pokemondotreinador1.habilidade.type}</p>
             </div>
             <div className={css(styles.divStatus)}>
                 <h1>treinador2</h1>
@@ -503,6 +568,7 @@ function Principal() {
                 <p>habilidade name: {pokemondotreinador2.habilidade.name}</p>
                 <p>habilidade power: {pokemondotreinador2.habilidade.power}</p>
                 <p>habilidade tipo: {pokemondotreinador2.habilidade.tipo}</p>
+                <p>habilidade type: {pokemondotreinador2.habilidade.type}</p>
             </div>
         </div>
     );
